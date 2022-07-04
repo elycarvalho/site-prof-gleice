@@ -1,0 +1,161 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, arial, sans-serif;
+	background-color: darkgrey;
+}
+
+.container{
+	padding: 5px 5px 0 5px;
+	background-color: #fff;
+	width: 95%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: repeat(4, auto);
+	grid-template-areas: 
+	"header header header"
+	"main main anuncio"
+	"main main lateral"
+	"rodape rodape rodape";
+}
+
+header{
+	margin-top: 5px;
+	grid-area: header;
+}
+
+.logo{
+	background-image: url(../teacher2.png);
+	width: 140px;
+	height: 112px;
+}
+/**** menu ****/
+nav{
+
+	position: relative;
+	top: -100px;
+	right: 0;
+}
+
+nav ul{
+    display: inline;
+
+}
+nav li{
+    float: right;
+    list-style: none;
+
+}
+
+nav li a{
+	color: #fff;
+	text-decoration: none;
+	background-color: #F89600;
+	padding: 18px 8px;
+	border-right: 1px solid lightgray;
+	 border-radius: 20px;
+}
+
+nav li a:hover{
+	font-weight: 600;
+	background-color: #fff;
+	color: #F89600;
+	border: 1px solid #F89600;
+}
+
+.dropdown-menu{
+	display: none;
+}
+/*****************/
+main{
+	margin-top: 10px;
+	width: 98%;
+	grid-area: main;
+}
+
+.anuncio{
+	height: 100px;
+	border-radius: 10px;
+	margin-top: 10px;
+	grid-area: anuncio;
+	background-color: lightgray;
+}
+
+aside{
+	margin-top: 10px;
+	grid-area: lateral;
+}
+
+footer{
+	padding: 5px;
+	font-weight: 550;
+	text-align: center;
+	margin-top: 20px;
+	color: #fff;
+	background-color: #F89600;
+	grid-area: rodape;
+}
+
+/****** media queries ****/
+@media (max-width: 576px) {
+	.container{
+		grid-template-rows: repeat(5, auto);
+		grid-template-areas: 
+		"header header header"
+	    "anuncio anuncio anuncio"
+	    "main main main"
+	    "lateral lateral lateral"
+	    "rodape rodape rodape";
+	}
+}
+/********** troca de menu ******/
+@media (max-width: 768px) {
+	nav{display: none;}
+    .dropdown-menu{
+    	display: inline-block;
+    	position: relative;
+    	bottom: 100px;
+    	float: right;
+    }
+	.dropbtn{
+		border-radius: 5px;
+		background-color: #F89600;
+		font-size: 1.2em;
+		font-weight: bold;
+		padding: 3px 10px;
+	}
+	.conteudo-dropdown{
+		display: none;
+		position: absolute;
+		right: 5px;
+		background-color: #F89600;
+		color: #fff;
+		min-width: 180px;
+		box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+		border-radius: 20px;
+		z-index: 1;
+	}
+	.conteudo-dropdown a{
+		color: #fff;
+		padding: 12px 16px;
+		text-decoration: none;
+		border-bottom: 1px solid #563400;
+		border-radius: 20px;
+		display: block;
+	}
+
+	.conteudo-dropdown a:hover{
+		background-color: #fff;
+		color: #F89600;
+		border: 1px solid #563400;
+		font-weight: 600;
+	}
+    .dropdown-menu:hover .conteudo-dropdown{
+        display: block;   
+    }
+    .dropdown-menu:hover .dropbtn{
+    	background-color: lightgray;
+    }
+   }
+}
