@@ -3,22 +3,23 @@
 	margin: 0 auto;
 	overflow-x: hidden;
 	padding: 0 5px 0 5px;
+	background-color: #fff;
 }
 .conteudo-principal img{
     width: 500px;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 
 /***** configurações da pagina atividades *****/
 .imagens-ativ img{
-	width: 550px;
-	margin: 20px;
+	width: 530px;
+	margin: 3px;
 }
 /***** configurações da pagina de contato ******/
 #formulario-contato{
 	margin: 50px auto;
-	width: 500px;
+	width: 75%;
 	border: 1px solid #dedede;
 	padding: 30px;
 }
@@ -27,5 +28,9 @@ footer{
 	margin-top: 100px;
 }
 
-
-
+/***** configurações dos cards de dicas *****/
+.card-dicas{
+	background-color: #ccffd6;
+	width: 360px;
+	margin: 5px;
+}
