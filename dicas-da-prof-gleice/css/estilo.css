@@ -1,29 +1,17 @@
-body{
+*{
 	margin: 0;
 	padding: 0;
+}
+body{
 	font-family: Helvetica, arial, sans-serif;
 	background-color: #8D8E8D;
 }
 
-.container{
-	padding: 5px 5px 0 5px;
-	background-color: #fff;
-	width: 95%;
-	margin: 0 auto;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: repeat(4, auto);
-	grid-template-areas: 
-	"header header header"
-	"main main anuncio"
-	"main main lateral"
-	"rodape rodape rodape";
-}
 
 header{
-	margin-top: 5px;
 	grid-area: header;
 	background-color: #80C47C;
+	padding: 5px;
 }
 
 .logo{
@@ -46,19 +34,19 @@ nav ul{
 nav li{
     float: right;
     list-style: none;
+    margin-top: 3px;
 }
 
 nav li a{
 	color: #fff;
 	text-decoration: none;
 	background-color: #F89600;
-	padding: 18px 8px;
+	padding: 15px 8px;
 	border-right: 1px solid lightgray;
-	border-radius: 15px;
+	border-radius: 5px;
 }
 
 nav li a:hover{
-	font-weight: 600;
 	background-color: #fff;
 	color: #F89600;
 	border: 1px solid #F89600;
@@ -73,9 +61,23 @@ main{
 	margin-top: 10px;
 	width: 98%;
 	grid-area: main;
+	text-align: center;
 }
 
+hr{
+    margin: 10px auto;
+
+
+}
+main h2, h3, h4{
+	margin: 20px 0;
+}
+main img{
+	width: 65%;
+	margin: 20px 0;
+}
 .anuncio{
+    text-align: center;
 	height: 100px;
 	border-radius: 10px;
 	margin-top: 10px;
@@ -84,109 +86,77 @@ main{
 }
 
 aside{
-	margin-top: 10px;
-	margin-bottom: 30px;
+	margin: 0 auto 150px auto;
 	grid-area: lateral;
-	
 	border-radius: 10px;
-	/*padding: 0 4px;*/
 }
 
-aside h3{
-	color: #ffffff;
-	background-color: #F89600;
-	border-radius: 10px 10px 0 0;
+.dicas{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.dica-port h3{
+    background-color: #157A23;
+    color: #F5FF5E;
+    border-radius: 10px 10px 0 0;
 	text-align: center;
 	padding: 8px;
 }
 
-.dicas{
-	background-color: #a8e6a5;
-	text-align: left;
-    border-radius: 10px;
-    padding: 0 4px 4px 5px;
+.dica-ingles h3{
+    background-color: #17338C;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+	text-align: center;
+	padding: 8px;
 }
 
-.dicas h4{
+.dica-port, .dica-ingles{
+	margin-top: 10px;
+	width: 350px;
+	background-color: #CCFFD6;
+	text-align: center;
+    border-radius: 10px;
+    padding: 0 4px 10px 4px;
+}
+
+.dica-port h4, .dica-ingles h4{
+	padding: 10px 0;
 	text-align: center;
 }
 
-.dicas a{
-	margin-left: 40%;
+.dica-port p, .dica-ingles p{
+	padding: 10px 15px;
 }
 
-.dicas p{
-	margin: 0 10px 10px 20px;
+
+.btn-mais{
+	margin-bottom: 20px;
+	text-decoration: none;
+	border-radius: 5px;
+	background-color: #F89600;
+	color: #fff;
+	padding: 4px;
 }
+
+.btn-mais:hover{
+	background-color: #fff;
+	color: #F89600;
+	border: 1px solid #F89600;
+}
+
 footer{
-	padding: 5px;
+	padding: 7px;
 	font-weight: 550;
 	text-align: center;
-	margin-top: 20px;
+	margin-top: 50px;
 	color: #fff;
 	background-color: #F89600;
 	grid-area: rodape;
 }
 
-/****** media queries ****/
-@media (max-width: 576px) {
-	.container{
-		grid-template-rows: repeat(5, auto);
-		grid-template-areas: 
-		"header header header"
-	    "anuncio anuncio anuncio"
-	    "main main main"
-	    "lateral lateral lateral"
-	    "rodape rodape rodape";
-	}
-}
-/********** troca de menu ******/
-@media (max-width: 768px) {
-	nav{display: none;}
-    .dropdown-menu{
-    	display: inline-block;
-    	position: relative;
-    	bottom: 100px;
-    	float: right;
-    }
-	.dropbtn{
-		border-radius: 5px;
-		background-color: #F89600;
-		font-size: 1.2em;
-		font-weight: bold;
-		padding: 3px 10px;
-	}
-	.conteudo-dropdown{
-		display: none;
-		position: absolute;
-		right: 5px;
-		background-color: #F89600;
-		color: #fff;
-		min-width: 180px;
-		box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-		border-radius: 20px;
-		z-index: 1;
-	}
-	.conteudo-dropdown a{
-		color: #fff;
-		padding: 18px 16px;
-		text-decoration: none;
-		border-bottom: 1px solid #563400;
-		border-radius: 20px;
-		display: block;
-	}
-
-	.conteudo-dropdown a:hover{
-		background-color: #fff;
-		color: #F89600;
-		border: 1px solid #563400;
-		font-weight: 600;
-	}
-    .dropdown-menu:hover .conteudo-dropdown{
-        display: block;   
-    }
-    .dropdown-menu:hover .dropbtn{
-    	background-color: lightgray;
-    }
-   }
-}
+/****** media queries estão no arquivo media-queries.css 
+ e media-queries2.css ****/
