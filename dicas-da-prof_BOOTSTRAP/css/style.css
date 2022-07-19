@@ -30,7 +30,15 @@ footer{
 
 /***** configurações dos cards de dicas *****/
 .card-dicas{
-	background-color: #ccffd6;
+	background-color: #D5FEDD;
 	width: 360px;
 	margin: 5px;
+}
+
+.card-dicas h3, .card-dicas h4{
+	text-align: center;
+}
+
+.card-dicas p{
+	padding-left: 10px;
 }
