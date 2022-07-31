@@ -1,0 +1,156 @@
+.gameContainer{
+   padding: 5px;
+	margin: 0 auto;
+	width: 94%;
+	height: 410px;
+	border: 1px solid #000;
+	border-radius: 5px;
+    box-shadow: 0px 5px 5px 0px;
+}
+
+#inicio{
+	margin: 0 auto;
+	background-color: #94FFAD;
+	width: 87.5%;
+	height: 410px;
+	border-radius: 5px;
+   box-shadow: 2px 3px 3px 0px #45614B;
+	position: absolute;
+	z-index: 1;
+}
+
+#inicio p{
+	font-weight: bold;
+	font-size: 1.2em;
+	padding: 15px 0;
+	margin: 100px auto;
+	width: 50%;
+   border-radius: 5px;
+	color: #fff;
+   background-color: #F89600;
+
+}
+
+#inicio p:hover{
+	color: #F89600;
+    background-color: #fff;
+    border: 2px solid #F89600;
+}
+
+#quiz{
+    width: 99%;
+    height: 410px;
+    display: grid;
+    grid-template-areas: 
+      'imagem pergunta'
+      'opcoes opcoes'
+      'timer progresso'    
+    ;
+}
+
+#pergunta{
+   font-size: 1.2em;
+   border-radius: 5px;
+   border: 3px solid green;
+   width: 100%;
+   height: 60px;
+   grid-area: pergunta;
+}
+
+#pergImg{
+   width: 90px;
+   height: 90px;
+   grid-area: imagem;
+}
+
+#opcoes{
+    width: 99%;
+    height: 130px;
+    grid-area: opcoes;
+}
+
+.opcao{
+   margin: 4px auto;
+   border: 3px solid cyan;
+   width: 70%;
+    height: 35px;
+}
+
+#timer{
+   width: 100px;
+    height: 100px;
+    grid-area: timer;
+}
+
+#contador{
+   margin: 20px auto 5px auto;
+   font-size: 1.5em;
+   border: 2px solid darkorange;
+   border-radius: 50%;
+   padding-top:15px;
+   width: 60px;
+    height: 40px;
+}
+
+#btimeGauge{
+   background-color: lightgray;
+   border-radius: 10px;
+   width: 100px;
+   height: 10px;
+}
+
+#timeGauge{
+   background-color: green;
+   border-radius: 10px;
+   width: 100px;
+   height: 10px;
+   margin-top: -10px;
+}
+
+#progresso{
+   width: 100%;
+   height: 35px;
+   grid-area: progresso;
+   margin-top: 30px;
+}
+
+.prog{
+    width : 18px;
+    height : 18px;
+    border: 1px solid #9DD1E2;
+    display: inline-block;
+    border-radius: 50%;
+    margin-left : 2px;
+    margin-right : 2px;
+}
+
+#containerPontos{
+   background-color: rgba(210, 255, 250, 0.9);
+   margin: 0 auto;
+   border-radius: 5px;
+   width: 87.5%;
+   height: 410px;
+   position: absolute;
+   box-shadow: 0px 5px 15px 0px;
+   z-index: 1;
+}
+
+#containerPontos img{
+    margin: 100px 0 50px 0;
+}
+
+
+#btnReinicia{
+   margin-top: 8px;
+   background-color: #fff;
+   color: darkorange;
+   border-radius: 5px;
+   border: 2px solid darkorange;
+   width: 90px;
+   height: 35px;
+}
+
+#btnReinicia:hover, #btnOutros:hover{
+   background-color: darkorange;
+   color: #fff;
+}
