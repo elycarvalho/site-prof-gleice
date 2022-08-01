@@ -1,5 +1,5 @@
 // select all elements
-const start = document.getElementById("start");
+const start = document.getElementById("inicio");
 const quiz = document.getElementById("quiz");
 const question = document.getElementById("pergunta");
 const qImg = document.getElementById("pergImg");
@@ -14,88 +14,87 @@ const scoreDiv = document.getElementById("containerPontos");
 // create our questions
 let questions = [
     {
-        question : "What does HTML stand for?",
-        imgSrc : "img/html.png",
+        question : "pergunta 1",
+        imgSrc : "img/pensar.gif",
         choiceA : "correct",
-        choiceB : "Wrong",
-        choiceC : "Wrong",
+        choiceB : "errada",
+        choiceC : "resposta errada",
         correct : "A"
     },{
-        question : "What does CSS stand for?",
-        imgSrc : "img/css.png",
+        question : "pergunta 2",
+        imgSrc : "img/thinking2.gif",
         choiceA : "Wrong",
-        choiceB : "correct",
+        choiceB : "resposta correta",
         choiceC : "Wrong",
         correct : "B"
     },{
-        question : "What does JS stand for?",
-        imgSrc : "img/js.png",
+        question : "pergunta 3",
+        imgSrc : "img/thinking4.gif",
         choiceA : "Wrong",
         choiceB : "Wrong",
-        choiceC : "Correct",
+        choiceC : "essa é a resposta correta",
         correct : "C"
     },{
-        question : "What is the correct answer?",
-        imgSrc : "img/js.png",
-        choiceA : "correct",
+        question : "pergunta 4",
+        imgSrc : "img/thinking3.gif",
+        choiceA : "correta",
         choiceB : "Wrong",
-        choiceC : "Correct",
+        choiceC : "incorrect",
         correct : "A"
     },{
-        question : "which word is correct?",
-        imgSrc : "img/css.png",
-        choiceA : "Wrong",
+        question : "pergunta 5",
+        imgSrc : "img/pensar.gif",
+        choiceA : "resposta errada",
         choiceB : "Correct",
         choiceC : "Wrong",
         correct : "B"
     },{
-        question : "is this correct?",
-        imgSrc : "img/js.png",
+        question : "pergunta 6",
+        imgSrc : "img/thinking2.gif",
         choiceA : "correct",
-        choiceB : "no",
-        choiceC : "wrong",
+        choiceB : "errada",
+        choiceC : "errada",
         correct : "A"
     },{
-        question : "What does MD stand for in this file: readme.md?",
-        imgSrc : "img/css.png",
+        question : "pergunta 7",
+        imgSrc : "img/thinking3.gif",
         choiceA : "Wrong",
-        choiceB : "Markdown",
+        choiceB : "certa",
         choiceC : "Wrong",
         correct : "B"
     },{
-        question : "which one is the right image?",
-        imgSrc : "img/js.png",
-        choiceA : "Wrong",
+        question : "pergunta 8",
+        imgSrc : "img/thinking4.gif",
+        choiceA : "errada",
         choiceB : "correct",
         choiceC : "wrong",
         correct : "B"
     },{
-        question : "What does AMID stand for?",
-        imgSrc : "img/css.png",
+        question : "pergunta 9",
+        imgSrc : "img/pensar.gif",
         choiceA : "Wrong",
         choiceB : "wrong",
         choiceC : "correct",
         correct : "C"
     },{
-        question : "What does it mean?",
-        imgSrc : "img/js.png",
-        choiceA : "correct",
+        question : "pergunta final",
+        imgSrc : "img/thinking2.gif",
+        choiceA : "correta",
         choiceB : "Wrong",
-        choiceC : "wrong",
+        choiceC : "errada",
         correct : "A"
     }
 ];
 
 // create some variables
-
-const lastQuestion = questions.length - 1;
-let runningQuestion = 0;
-let count = 0;
-const questionTime = 25; // 25s
-const gaugeWidth = 150; // 150px
-const gaugeUnit = gaugeWidth / questionTime;
-let TIMER;
-let score = 0;
+    const lastQuestion = questions.length - 1;
+    let runningQuestion = 0;
+    let count = 0;
+    const questionTime = 25; // 25s
+    const gaugeWidth = 100; // 150px
+    const gaugeUnit = gaugeWidth / questionTime;
+    let TIMER;
+    let score = 0;
 
 // render a question
 function renderQuestion(){
@@ -114,7 +113,7 @@ start.addEventListener("click",startQuiz);
 function startQuiz(){
     start.style.display = "none";
     renderQuestion();
-    quiz.style.display = "block";
+    quiz.style.display = "grid";
     renderProgress();
     renderCounter();
     TIMER = setInterval(renderCounter,1000); // 1000ms = 1s
@@ -175,12 +174,12 @@ function checkAnswer(answer){
 
 // answer is correct
 function answerIsCorrect(){
-    document.getElementById(runningQuestion).innerHTML = "<img src='img/correct.png'>";
+    document.getElementById(runningQuestion).style.backgroundColor = "#0f0";
 }
 
 // answer is Wrong
 function answerIsWrong(){
-    document.getElementById(runningQuestion).innerHTML = "<img src='img/wrong.png'>";
+    document.getElementById(runningQuestion).style.backgroundColor = "#f00";
 }
 
 // score render
@@ -191,15 +190,22 @@ function scoreRender(){
     const scorePerCent = Math.round(100 * score/questions.length);
     
     // choose the image based on the scorePerCent
-    let img = (scorePerCent >= 80) ? "img/5.png" :
-              (scorePerCent >= 60) ? "img/4.png" :
-              (scorePerCent >= 40) ? "img/3.png" :
-              (scorePerCent >= 20) ? "img/2.png" :
-              "img/1.png";
+    let img = (scorePerCent >= 80) ? "img/congrats.gif" :
+              (scorePerCent >= 60) ? "img/congrats2.gif" :
+              (scorePerCent >= 40) ? "img/thumbDown.gif" :
+              (scorePerCent >= 20) ? "img/crying.gif" :
+              "img/crying.gif";
     
     scoreDiv.innerHTML = "<img src="+ img +">";
     scoreDiv.innerHTML += "<p>"+ scorePerCent +"%</p>";
+    scoreDiv.innerHTML += `<button id="btnReinicia" onclick="reinicia()">Reiniciar</button>`;
 }
+
+function reinicia(){
+    location.reload();
+}
+
+ 
 
 
 
