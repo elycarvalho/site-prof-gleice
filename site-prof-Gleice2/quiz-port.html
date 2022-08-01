@@ -44,28 +44,29 @@
 
     <main>
       <div class="gameContainer" id="quizContainer"><!--inicio gameContainer-->
-        <div id="start">
+        <div id="inicio">
           <p>Iniciar o jogo!</p>
         </div>
-        <!--<div id="quiz"  style="display: none">-->
+        <div id="containerPontos" style="display: none">
+          <!--<button id="btnReinicia" onclick="location.reload()">Reiniciar</button> -->
+        </div>
         <div id="quiz" style="display: none"><!--inicio div quiz-->
           <div id="pergunta">perguntas: como se escreve essa palavra</div>
-          <div id="pergImg">pImg</div>
+          <div id="pergImg"></div>
           <div id="opcoes">
             <div class="opcao" id="A" onclick="checkAnswer('A')"></div>
             <div class="opcao" id="B" onclick="checkAnswer('B')"></div>
             <div class="opcao" id="C" onclick="checkAnswer('C')"></div>
           </div>
           <div id="timer">
-            <div id="contador">cont</div>
-            <div id="btimeGauge">btime</div>
-            <div id="timeGauge">time</div>
+            <div id="contador"></div>
+            <div id="btimeGauge"></div>
+            <div id="timeGauge"></div>
           </div>
-          <div id="progresso">progresso</div>
+          <div id="progresso"></div>
         </div><!--fim div quiz-->
-        <div id="containerPontos" style="display: none"></div>
-        <button id="btnReinicia" onclick="location.reload()">Jogar novamente</button>
-        <a href="jogos.html"><button class="btnOutros">Outros jogos</button></a> 
+        
+        
       </div><!--fim gameContainer-->
     </main>
 
