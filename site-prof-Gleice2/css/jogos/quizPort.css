@@ -1,132 +1,213 @@
 .gameContainer{
+   padding: 5px;
 	margin: 0 auto;
-	width: 94%;
+	width: 96%;
 	height: 410px;
 	border: 1px solid #000;
 	border-radius: 5px;
-    box-shadow: 0px 5px 10px 0px;
-    
+    box-shadow: 0px 5px 5px 0px;
 }
 
-#start{
+#inicio{
 	margin: 0 auto;
-	background-color: rgba(255, 250, 200, 0.7);
-	width: 87%;
+	background-color: #94FFAD;
+	width: 89%;
 	height: 410px;
 	border-radius: 5px;
+   box-shadow: 2px 3px 3px 0px #45614B;
 	position: absolute;
 	z-index: 1;
 }
 
-#start p{
+#inicio p{
 	font-weight: bold;
 	font-size: 1.2em;
 	padding: 15px 0;
 	margin: 100px auto;
 	width: 50%;
-	border: 3px solid #F89600;
-	color: #F89600;
+   border-radius: 5px;
+	color: #fff;
+   background-color: #F89600;
 
 }
 
-#start p:hover{
-	color: #fff;
-    background-color: #F89600;
+#inicio p:hover{
+	color: #F89600;
+    background-color: #fff;
+    border: 2px solid #F89600;
 }
 
 #quiz{
-    width: 99,5%;
-    border: 3px solid blue;
+    width: 99%;
+    height: 410px;
     display: grid;
-    grid-gap: 10px;
-    grid-template-columns: (10% 90%);
-    grid-template-rows: repeat(3, auto);
     grid-template-areas: 
       'imagem pergunta'
-      'timer opcoes'
-      'progresso progresso'
+      'opcoes opcoes'
+      'timer progresso'    
     ;
-    
 }
 
 #pergunta{
-    border: 3px solid green;
-    width: 99%;
-    height: 100px; 
-    grid-area: pergunta;
+   color: #fff;
+   background-image: linear-gradient(#286335, rgb(5, 95, 5));
+   padding-top: 10px;
+   font-size: 1.3em;
+   font-weight: bold;
+   border-radius: 5px;
+   border: 3px solid green;
+   width: 100%;
+   height: 60px;
+   grid-area: pergunta;
 }
 
 #pergImg{
-    border: 3px solid orange;
-    width: 90px;
-    height: 100px;
-    grid-area: imagem;
+   width: 90px;
+   height: 90px;
+   grid-area: imagem;
 }
 
 #opcoes{
-    border: 3px solid gray;
     width: 99%;
-    height: 150px;
+    height: 130px;
     grid-area: opcoes;
 }
 
 .opcao{
-    margin: 3px auto;
-   border: 3px solid cyan;
-   width: 95%;
-    height: 40px;
+   color: #fff;
+   font-size: 1.2em;
+   font-weight: bold;
+   padding-top: 12px;
+   margin: 4px auto;
+   border: 2px solid rgb(255, 136, 0);
+   background-color: rgb(253, 116, 4);
+   width: 68%;
+    height: 35px;
+    border-radius: 5px;
+}
+.opcao:hover{
+   background-color: rgb(204, 233, 206);
+   color: rgb(253, 116, 4);
 }
 
 #timer{
-   border: 3px solid yellow;
-   width: 160px;
-    height: 150px;
+   width: 100px;
+    height: 100px;
     grid-area: timer;
 }
 
 #contador{
-   border: 3px solid magenta;
-   width: 150px;
-    height:80px;
+   margin: 20px auto 5px auto;
+   font-size: 1.5em;
+   border: 2px solid darkorange;
+   border-radius: 50%;
+   padding-top:15px;
+   width: 60px;
+    height: 40px;
 }
 
 #btimeGauge{
-   border: 3px solid darksalmon;
-   width: 150px;
-    height: 12px;
+   background-color: lightgray;
+   border-radius: 10px;
+   width: 100px;
+   height: 10px;
 }
 
 #timeGauge{
-   border: 3px solid brown;
-   width: 50px;
-    height: 12px;
+   background-color: green;
+   border-radius: 10px;
+   width: 100px;
+   height: 10px;
+   margin-top: -10px;
 }
 
 #progresso{
-   border: 3px solid darkseagreen;
-   width: 99%;
-    height: 40px;
-    grid-area: progresso;
+   width: 100%;
+   height: 35px;
+   grid-area: progresso;
+   margin-top: 30px;
+}
+
+.prog{
+    width : 18px;
+    height : 18px;
+    border: 1px solid #9DD1E2;
+    display: inline-block;
+    border-radius: 50%;
+    margin-left : 2px;
+    margin-right : 2px;
 }
 
 #containerPontos{
-   border: 3px solid darkcyan;
-   width: 50px;
-    height: 50px;
+   background-color: rgba(210, 255, 250, 0.9);
+   margin: 0 auto;
+   border-radius: 5px;
+   width: 87.5%;
+   height: 410px;
+   position: absolute;
+   box-shadow: 0px 5px 15px 0px;
+   z-index: 1;
 }
 
-#btnReinicia, .btnOutros{
-    margin: 5px;
-    border: none;
-    font-weight: bold;
-    border-radius: 5px;
-    background-color: #F89600;
-    color: #fff;
-    width: 120px;
-    height: 30px;
+#containerPontos img{
+   width: 230px;
+   margin: 0 0 50px 0;
 }
-.btnOutros:hover, #btnReinicia:hover{
-    background-color: #fff;
-    color: #F89600;
-    border: 2px solid #F89600;
+
+#containerPontos p{
+   font-size: 2.5em;
+   font-weight: bold;
+   margin-bottom: 20px;
+}
+
+
+#btnReinicia{
+   margin-top: 8px;
+   background-color: #fff;
+   color: darkorange;
+   border-radius: 5px;
+   border: 2px solid darkorange;
+   width: 90px;
+   height: 35px;
+}
+
+#btnReinicia:hover, #btnOutros:hover{
+   background-color: darkorange;
+   color: #fff;
+}
+
+@media (min-width: 576px) {
+   .gameContainer{
+      width: 75%;
+   }
+   #inicio{
+      width: 70%;
+   }
+   #containerPontos{
+      width: 70%;
+   }
+}
+
+@media (min-width: 768px) {
+   .gameContainer{
+      width: 55%;
+   }
+   #inicio{
+      width: 51%;
+   }
+   #containerPontos{
+      width: 51.2%;
+   }
+}
+
+@media (min-width: 992px) {
+   .gameContainer{
+      width: 50%;
+   }
+   #inicio{
+      width: 46.5%;
+   }
+   #containerPontos{
+      width: 46.5%;
+   }
 }
