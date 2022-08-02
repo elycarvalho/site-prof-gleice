@@ -45,11 +45,16 @@
     <main>
       <div class="gameContainer" id="quizContainer"><!--inicio gameContainer-->
         <div id="inicio">
-          <p>Iniciar o jogo!</p>
+          <legend>Selecione um nível</legend>
+          <select name="niveis" id="niveis">
+            <option value="nivel1">Nível 1</option>
+            <option value="nivel2">Nível 2</option>
+            <option value="nivel3">Nível 3</option>
+          </select>
+          <p id="btnIniciar">Iniciar o jogo!</p>
         </div>
-        <div id="containerPontos" style="display: none">
-          <!--<button id="btnReinicia" onclick="location.reload()">Reiniciar</button> -->
-        </div>
+        <div id="containerPontos" style="display: none"></div>
+
         <div id="quiz" style="display: none"><!--inicio div quiz-->
           <div id="pergunta">perguntas: como se escreve essa palavra</div>
           <div id="pergImg"></div>

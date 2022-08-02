@@ -42,8 +42,8 @@ nav li a{
 	text-decoration: none;
 	background-color: #F89600;
 	padding: 15px 8px;
-	border-right: 1px solid lightgray;
-	border-radius: 5px;
+	border-right: 1px solid #D3A66D;
+	border-radius: 4px;
 }
 
 nav li a:hover{

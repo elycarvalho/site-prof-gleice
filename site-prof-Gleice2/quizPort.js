@@ -1,5 +1,6 @@
-// select all elements
+// seleciona todos os elementos
 const start = document.getElementById("inicio");
+const btnIniciar = document.getElementById("btnIniciar")
 const quiz = document.getElementById("quiz");
 const question = document.getElementById("pergunta");
 const qImg = document.getElementById("pergImg");
@@ -11,82 +12,232 @@ const timeGauge = document.getElementById("timeGauge");
 const progress = document.getElementById("progresso");
 const scoreDiv = document.getElementById("containerPontos");
 
-// create our questions
+
+// criar variaveis das perguntas
 let questions = [
     {
-        question : "pergunta 1",
+        question : "pergunta  nivel 1",
         imgSrc : "img/pensar.gif",
-        choiceA : "correct",
+        choiceA : "correta",
         choiceB : "errada",
-        choiceC : "resposta errada",
+        choiceC : "errada",
         correct : "A"
     },{
         question : "pergunta 2",
         imgSrc : "img/thinking2.gif",
-        choiceA : "Wrong",
-        choiceB : "resposta correta",
-        choiceC : "Wrong",
+        choiceA : "errada",
+        choiceB : "correta",
+        choiceC : "errada",
         correct : "B"
     },{
         question : "pergunta 3",
         imgSrc : "img/thinking4.gif",
-        choiceA : "Wrong",
-        choiceB : "Wrong",
+        choiceA : "errada",
+        choiceB : "errada",
         choiceC : "essa é a resposta correta",
         correct : "C"
     },{
         question : "pergunta 4",
         imgSrc : "img/thinking3.gif",
         choiceA : "correta",
-        choiceB : "Wrong",
+        choiceB : "errada",
         choiceC : "incorrect",
         correct : "A"
     },{
         question : "pergunta 5",
         imgSrc : "img/pensar.gif",
         choiceA : "resposta errada",
-        choiceB : "Correct",
-        choiceC : "Wrong",
+        choiceB : "Correta",
+        choiceC : "errada",
         correct : "B"
     },{
         question : "pergunta 6",
         imgSrc : "img/thinking2.gif",
-        choiceA : "correct",
+        choiceA : "correta",
         choiceB : "errada",
         choiceC : "errada",
         correct : "A"
     },{
         question : "pergunta 7",
         imgSrc : "img/thinking3.gif",
-        choiceA : "Wrong",
+        choiceA : "errada",
         choiceB : "certa",
-        choiceC : "Wrong",
+        choiceC : "errada",
         correct : "B"
     },{
         question : "pergunta 8",
         imgSrc : "img/thinking4.gif",
         choiceA : "errada",
-        choiceB : "correct",
-        choiceC : "wrong",
+        choiceB : "correta",
+        choiceC : "errada",
         correct : "B"
     },{
         question : "pergunta 9",
         imgSrc : "img/pensar.gif",
-        choiceA : "Wrong",
-        choiceB : "wrong",
-        choiceC : "correct",
+        choiceA : "errada",
+        choiceB : "errada",
+        choiceC : "correta",
         correct : "C"
     },{
         question : "pergunta final",
         imgSrc : "img/thinking2.gif",
         choiceA : "correta",
-        choiceB : "Wrong",
+        choiceB : "errada",
         choiceC : "errada",
         correct : "A"
     }
 ];
 
-// create some variables
+//perguntas do nivel 2
+let questions2 = [
+    {
+        question : "pergunta nivel 2",
+        imgSrc : "img/pensar.gif",
+        choiceA : "correta",
+        choiceB : "errada",
+        choiceC : "errada",
+        correct : "A"
+    },{
+        question : "pergunta 2",
+        imgSrc : "img/thinking2.gif",
+        choiceA : "errada",
+        choiceB : "correta",
+        choiceC : "errada",
+        correct : "B"
+    },{
+        question : "pergunta 3",
+        imgSrc : "img/thinking4.gif",
+        choiceA : "errada",
+        choiceB : "errada",
+        choiceC : "essa é a resposta correta",
+        correct : "C"
+    },{
+        question : "pergunta 4",
+        imgSrc : "img/thinking3.gif",
+        choiceA : "correta",
+        choiceB : "errada",
+        choiceC : "incorrect",
+        correct : "A"
+    },{
+        question : "pergunta 5",
+        imgSrc : "img/pensar.gif",
+        choiceA : "resposta errada",
+        choiceB : "Correta",
+        choiceC : "errada",
+        correct : "B"
+    },{
+        question : "pergunta 6",
+        imgSrc : "img/thinking2.gif",
+        choiceA : "correta",
+        choiceB : "errada",
+        choiceC : "errada",
+        correct : "A"
+    },{
+        question : "pergunta 7",
+        imgSrc : "img/thinking3.gif",
+        choiceA : "errada",
+        choiceB : "certa",
+        choiceC : "errada",
+        correct : "B"
+    },{
+        question : "pergunta 8",
+        imgSrc : "img/thinking4.gif",
+        choiceA : "errada",
+        choiceB : "correta",
+        choiceC : "errada",
+        correct : "B"
+    },{
+        question : "pergunta 9",
+        imgSrc : "img/pensar.gif",
+        choiceA : "errada",
+        choiceB : "errada",
+        choiceC : "correta",
+        correct : "C"
+    },{
+        question : "pergunta final",
+        imgSrc : "img/thinking2.gif",
+        choiceA : "correta",
+        choiceB : "errada",
+        choiceC : "errada",
+        correct : "A"
+    }
+];
+
+//perguntas do nivel 3
+let questions3 = [
+    {
+        question : "pergunta nivel 3",
+        imgSrc : "img/pensar.gif",
+        choiceA : "correta",
+        choiceB : "errada",
+        choiceC : "errada",
+        correct : "A"
+    },{
+        question : "pergunta 2",
+        imgSrc : "img/thinking2.gif",
+        choiceA : "errada",
+        choiceB : "correta",
+        choiceC : "errada",
+        correct : "B"
+    },{
+        question : "pergunta 3",
+        imgSrc : "img/thinking4.gif",
+        choiceA : "errada",
+        choiceB : "errada",
+        choiceC : "essa é a resposta correta",
+        correct : "C"
+    },{
+        question : "pergunta 4",
+        imgSrc : "img/thinking3.gif",
+        choiceA : "correta",
+        choiceB : "errada",
+        choiceC : "incorrect",
+        correct : "A"
+    },{
+        question : "pergunta 5",
+        imgSrc : "img/pensar.gif",
+        choiceA : "resposta errada",
+        choiceB : "Correta",
+        choiceC : "errada",
+        correct : "B"
+    },{
+        question : "pergunta 6",
+        imgSrc : "img/thinking2.gif",
+        choiceA : "correta",
+        choiceB : "errada",
+        choiceC : "errada",
+        correct : "A"
+    },{
+        question : "pergunta 7",
+        imgSrc : "img/thinking3.gif",
+        choiceA : "errada",
+        choiceB : "certa",
+        choiceC : "errada",
+        correct : "B"
+    },{
+        question : "pergunta 8",
+        imgSrc : "img/thinking4.gif",
+        choiceA : "errada",
+        choiceB : "correta",
+        choiceC : "errada",
+        correct : "B"
+    },{
+        question : "pergunta 9",
+        imgSrc : "img/pensar.gif",
+        choiceA : "errada",
+        choiceB : "errada",
+        choiceC : "correta",
+        correct : "C"
+    },{
+        question : "pergunta final",
+        imgSrc : "img/thinking2.gif",
+        choiceA : "correta",
+        choiceB : "errada",
+        choiceC : "errada",
+        correct : "A"
+    }
+];
+// cria algumas variáveis
     const lastQuestion = questions.length - 1;
     let runningQuestion = 0;
     let count = 0;
@@ -96,7 +247,7 @@ let questions = [
     let TIMER;
     let score = 0;
 
-// render a question
+// renderiza uma pergunta
 function renderQuestion(){
     let q = questions[runningQuestion];
     
@@ -107,10 +258,21 @@ function renderQuestion(){
     choiceC.innerHTML = q.choiceC;
 }
 
-start.addEventListener("click",startQuiz);
 
-// start quiz
+btnIniciar.addEventListener("click",startQuiz);
+
+// inicia quiz
 function startQuiz(){
+    let niveis = document.getElementById("niveis").value;
+    switch (niveis) {
+        case 'nivel2':
+          questions = questions2;
+          console.log = questions;
+          break;
+        case 'nivel3':
+          questions = questions3;
+          break;
+    }
     start.style.display = "none";
     renderQuestion();
     quiz.style.display = "grid";
@@ -119,14 +281,14 @@ function startQuiz(){
     TIMER = setInterval(renderCounter,1000); // 1000ms = 1s
 }
 
-// render progress
+// renderiza barra de progresso
 function renderProgress(){
     for(let qIndex = 0; qIndex <= lastQuestion; qIndex++){
         progress.innerHTML += "<div class='prog' id="+ qIndex +"></div>";
     }
 }
 
-// counter render
+// renderiza contador
 
 function renderCounter(){
     if(count <= questionTime){
@@ -135,30 +297,30 @@ function renderCounter(){
         count++
     }else{
         count = 0;
-        // change progress color to red
+        // muda cor da barra de progresso p/ vermelho
         answerIsWrong();
         if(runningQuestion < lastQuestion){
             runningQuestion++;
             renderQuestion();
         }else{
-            // end the quiz and show the score
+            // encerra o quiz e mostra pontuação
             clearInterval(TIMER);
             scoreRender();
         }
     }
 }
 
-// checkAnwer
+// checa a resposta
 
 function checkAnswer(answer){
     if( answer == questions[runningQuestion].correct){
-        // answer is correct
+        // resposta correta
         score++;
-        // change progress color to green
+        // muda cor da barra de progresso para verde
         answerIsCorrect();
     }else{
-        // answer is wrong
-        // change progress color to red
+        // resposta errada
+        // muda cor da barra de progresso p/ vermelho
         answerIsWrong();
     }
     count = 0;
@@ -166,30 +328,29 @@ function checkAnswer(answer){
         runningQuestion++;
         renderQuestion();
     }else{
-        // end the quiz and show the score
+        // encerra o quiz e mostra a pontuação
         clearInterval(TIMER);
         scoreRender();
     }
 }
 
-// answer is correct
+// quando a resposta for correta
 function answerIsCorrect(){
     document.getElementById(runningQuestion).style.backgroundColor = "#0f0";
 }
 
-// answer is Wrong
+// quando a resposta estiver errada
 function answerIsWrong(){
     document.getElementById(runningQuestion).style.backgroundColor = "#f00";
 }
 
-// score render
+// renderiza pontuação
 function scoreRender(){
     scoreDiv.style.display = "block";
-    
-    // calculate the amount of question percent answered by the user
+    // calcula a porcentagem de respostas corretas
     const scorePerCent = Math.round(100 * score/questions.length);
     
-    // choose the image based on the scorePerCent
+    // escolhe a imagem de acordo com a pontuação final
     let img = (scorePerCent >= 80) ? "img/congrats.gif" :
               (scorePerCent >= 60) ? "img/congrats2.gif" :
               (scorePerCent >= 40) ? "img/thumbDown.gif" :
