@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Atividades e dicas da Prof Gleice</title>
   <link rel="stylesheet" type="text/css" href="css/estilo.css">
+  <link rel="stylesheet" type="text/css" href="css/jogos/quizPort.css">
   <link rel="stylesheet" type="text/css" href="css/media-queries2.css">
 </head>
 
@@ -16,9 +17,10 @@
         <div class="logo">
         </div>
       </a>
+
       <nav>
         <ul>
-          <li><a href="contato.html">Contato</a></li>
+          <li><a href="Contato.html">Contato</a></li>
           <li><a href="dicas-ingles.html">Dicas de inglês</a></li>
           <li><a href="atividades.html">Atividades</a></li>
           <li><a href="jogos.html">Jogos</a></li>
@@ -26,7 +28,7 @@
           <li><a href="index.html">Início</a></li>
         </ul>
       </nav>
-      <!--menu hamburguer-->
+
       <div class="menu-hamburguer">
         <div id="conteudo-dropdown">
           <a href="index.html">Início</a>
@@ -43,19 +45,43 @@
     </header>
 
     <main>
-      <h2>Ativdades de português</h2>
-      <hr>
-      <h2>Atividades de matemática</h2>
-      <hr>
-      <h2>Atividades de Ciências</h2>
-      <hr>
+      <div class="gameContainer" id="quizContainer"><!--inicio gameContainer-->
+        <div id="inicio">
+          <legend>Selecione um nível</legend>
+          <select name="niveis" id="niveis">
+            <option value="nivel1">Nível 1</option>
+            <option value="nivel2">Nível 2</option>
+            <option value="nivel3">Nível 3</option>
+          </select>
+          <p id="btnIniciar">Iniciar o jogo!</p>
+        </div>
+        <div id="containerPontos" style="display: none"></div>
+
+        <div id="quiz" style="display: none"><!--inicio div quiz-->
+          <div id="pergunta">perguntas: como se escreve essa palavra</div>
+          <div id="pergImg"></div>
+          <div id="opcoes">
+            <div class="opcao" id="A" onclick="checkAnswer('A')"></div>
+            <div class="opcao" id="B" onclick="checkAnswer('B')"></div>
+            <div class="opcao" id="C" onclick="checkAnswer('C')"></div>
+          </div>
+          <div id="timer">
+            <div id="contador"></div>
+            <div id="btimeGauge"></div>
+            <div id="timeGauge"></div>
+          </div>
+          <div id="progresso"></div>
+        </div><!--fim div quiz-->
+        
+        
+      </div><!--fim gameContainer-->
     </main>
 
     <div class="anuncio">
       Publicidade
     </div>
 
-
+    <script src="js/quizPort.js"></script>
     <script src="js/script.js"></script>
     <footer>
       &copy; Ely Carvalho 2022

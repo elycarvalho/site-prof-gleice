@@ -14,7 +14,7 @@
 	width: 89%;
 	height: 410px;
 	border-radius: 5px;
-   box-shadow: 2px 3px 3px 0px #45614B;
+   box-shadow: 3px 3px 5px 5px #45614B;
 	position: absolute;
 	z-index: 1;
 }
@@ -94,10 +94,12 @@
 }
 
 .opcao{
+   
    color: #fff;
-   font-size: 1.2em;
+   font-size: 1.1em;
    font-weight: bold;
    padding-top: 12px;
+   padding-bottom: 5px;
    margin: 4px auto;
    border: 2px solid rgb(255, 136, 0);
    background-color: rgb(253, 116, 4);
@@ -106,8 +108,7 @@
     border-radius: 5px;
 }
 .opcao:hover{
-   background-color: rgb(204, 233, 206);
-   color: rgb(253, 116, 4);
+   cursor: pointer;
 }
 
 #timer{
@@ -117,25 +118,28 @@
 }
 
 #contador{
+   color: #fff;
    margin: 20px auto 5px auto;
    font-size: 1.5em;
-   border: 2px solid darkorange;
-   border-radius: 50%;
+   font-weight: bold;
+   border: 2px solid darkgray;
+   border-radius: 5px;
    padding-top:15px;
-   width: 60px;
-    height: 40px;
+   width: 50px;
+    height: 35px;
+    background-color: #003E6E;
 }
 
 #btimeGauge{
    background-color: lightgray;
-   border-radius: 10px;
+   border-radius: 5px;
    width: 100px;
    height: 10px;
 }
 
 #timeGauge{
-   background-color: green;
-   border-radius: 10px;
+   background-image: linear-gradient(90deg, #59DB39, #FF0A06);
+   border-radius: 5px;
    width: 100px;
    height: 10px;
    margin-top: -10px;
@@ -149,8 +153,9 @@
 }
 
 .prog{
-    width : 18px;
-    height : 18px;
+   background-color: #ECFBE8;
+    width : 15px;
+    height : 15px;
     border: 1px solid #9DD1E2;
     display: inline-block;
     border-radius: 50%;

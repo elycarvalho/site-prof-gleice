@@ -15,9 +15,9 @@ header{
 }
 
 .logo{
-	background-image: url(../img/teacher2.png);
+	background-image: url(../img/prof_gleice6.png);
 	width: 140px;
-	height: 112px;
+	height: 115px;
 }
 /**** menu ****/
 nav{
@@ -59,8 +59,8 @@ nav li a:hover{
 	color: #fff;
 	border-radius: 5px;
 	position: absolute;
-	top: 42px;
-	right: 35px;
+	top: 5px;
+	right: 85px;
 }
 #conteudo-dropdown a{
 	text-decoration: none;
@@ -121,7 +121,7 @@ aside{
 	border-radius: 10px;
 }
 
-.dicas{
+.dicas, #cards-jogos{
 	display: flex;
 	justify-content: space-around;
 	flex-direction: row;
@@ -136,21 +136,21 @@ aside{
 	padding: 8px;
 }
 
-.dica-ingles h3{
+.dica-ingles h3, .card-jogo h3{
     background-color: #17338C;
     color: #fff;
     border-radius: 10px 10px 0 0;
 	text-align: center;
-	padding: 8px;
+	padding: 9px;
 }
 
-.dica-port, .dica-ingles{
+.dica-port, .dica-ingles, .card-jogo{
 	margin-top: 10px;
 	width: 350px;
 	background-color: #CCFFD6;
 	text-align: left;
     border-radius: 10px;
-    padding: 0 4px 10px 4px;
+    padding: 0 2px 10px 2px;
 }
 
 .dica-port h4, .dica-ingles h4{
@@ -191,5 +191,9 @@ footer{
 	grid-area: rodape;
 }
 
+.card-jogo img{
+	margin-left: 15%;
+	cursor: pointer;
+}
 /****** media queries estão no arquivo media-queries.css 
  e media-queries2.css ****/
